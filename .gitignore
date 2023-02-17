@@ -1,0 +1,8 @@
+.idea
+.vscode
+
+# test report
+report.xml
+c.out
+coverage.html
+coverage.xml
