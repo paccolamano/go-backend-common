@@ -1,4 +1,4 @@
-module go-backend-common
+module  github.com/paccolamano/go-backend-common
 
 go 1.19
 
