@@ -1,4 +1,4 @@
-module  github.com/paccolamano/go-backend-common
+module github.com/paccolamano/go-backend-common
 
 go 1.19
 
@@ -11,6 +11,7 @@ require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/go-playground/locales v0.14.1 // indirect
 	github.com/go-playground/universal-translator v0.18.1 // indirect
+	github.com/jstemmer/go-junit-report/v2 v2.0.0 // indirect
 	github.com/kr/text v0.2.0 // indirect
 	github.com/leodido/go-urn v1.2.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
