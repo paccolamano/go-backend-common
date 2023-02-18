@@ -1,5 +1,5 @@
 NAME ?= go-backend-common
-VERSION ?= 0.2.0
+VERSION ?= 0.2.1
 
 .PHONY: build run version test coverage dev docs
 
