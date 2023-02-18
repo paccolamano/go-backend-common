@@ -63,7 +63,7 @@ func createDatabase() Database {
 		})
 		if err != nil {
 			log.Errorf("cannot connect to db '%s'. attempt number %d of %d failed.", dbSchema, i+1, retry)
-			time.Sleep(5 * time.Second)
+			time.Sleep(time.Duration(i*i) * time.Second)
 			continue
 		}
 		connected = true
@@ -71,13 +71,16 @@ func createDatabase() Database {
 
 	if !connected {
 		log.Error("cannot connect to database. exiting...")
+		panic(1)
 	}
 
 	sqlDB, err := db.DB()
 	if err != nil {
 		log.Fatalf("connection pool cannot be set up due to: %s", err)
 	}
-	sqlDB.SetMaxOpenConns(150)
+
+	maxConnection, _ := strconv.Atoi(env.GetEnv("MYSQL_MAX_OPEN_CONN", "150"))
+	sqlDB.SetMaxOpenConns(maxConnection)
 	sqlDB.SetMaxIdleConns(15)
 	sqlDB.SetConnMaxLifetime(time.Hour)
 

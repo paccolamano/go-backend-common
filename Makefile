@@ -1,7 +1,7 @@
 NAME ?= go-backend-common
 VERSION ?= 0.4.0
 
-.PHONY: build run version test coverage dev docs
+.PHONY: version test coverage
 
 version:
 	@echo $(VERSION)
