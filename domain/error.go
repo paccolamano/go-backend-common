@@ -10,7 +10,7 @@ import (
 )
 
 const (
-	ServiceNilError = "one or more of the services is null"
+	ArgsNilError = "one or more of the required args is null"
 
 	HttpRequestInfoMessage  = "sending http %s request to %s with body %v"
 	HttpResponseInfoMessage = "received http reply with status code %d and body %v"

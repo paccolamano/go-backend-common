@@ -19,7 +19,7 @@ func TestErrorSuite(t *testing.T) {
 }
 
 func (suite *ErrorSuite) TestConstant() {
-	suite.Equal("one or more of the services is null", ServiceNilError)
+	suite.Equal("one or more of the required args is null", ArgsNilError)
 
 	suite.Equal("sending http %s request to %s with body %v", HttpRequestInfoMessage)
 	suite.Equal("received http reply with status code %d and body %v", HttpResponseInfoMessage)
